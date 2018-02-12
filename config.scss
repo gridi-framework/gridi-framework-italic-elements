@@ -1,0 +1,15 @@
+//Dfn
+$dfn-font-style: italic !default;
+//@mixin dfn-extra-style() {} //Create this mixin before import module when you want add some special style for element
+//Em
+$em-font-style: italic !default;
+//@mixin em-extra-style() {} //Create this mixin before import module when you want add some special style for element
+//I
+$i-font-style: italic !default;
+//@mixin i-extra-style() {} //Create this mixin before import module when you want add some special style for element
+//Var
+$var-font-style: italic !default;
+//@mixin var-extra-style() {} //Create this mixin before import module when you want add some special style for element
+
+//Dfn Em I Var
+//@mixin dfn-em-i-var-extra-style() {} //Create this mixin before import module when you want add some special style for element

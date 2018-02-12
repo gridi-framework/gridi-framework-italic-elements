@@ -1,0 +1,44 @@
+dfn {
+    @if $dfn-font-style != $em-font-style or $dfn-font-style != $i-font-style or $dfn-font-style != $var-font-style {
+        font-style: $dfn-font-style;
+    }
+    @if mixin-exists(dfn-extra-style) {
+        @include dfn-extra-style();
+    }
+}
+
+em {
+    @if $em-font-style != $dfn-font-style or $em-font-style != $i-font-style or $em-font-style != $var-font-style {
+        font-style: $em-font-style;
+    }
+    @if mixin-exists(em-extra-style) {
+        @include em-extra-style();
+    }
+}
+
+i {
+    @if $i-font-style != $dfn-font-style or $i-font-style != $em-font-style or $i-font-style != $var-font-style {
+        font-style: $i-font-style;
+    }
+    @if mixin-exists(i-extra-style) {
+        @include i-extra-style();
+    }
+}
+
+var {
+    @if $var-font-style != $dfn-font-style or $var-font-style != $em-font-style or $var-font-style != $i-font-style {
+        font-style: $var-font-style;
+    }
+    @if mixin-exists(var-extra-style) {
+        @include var-extra-style();
+    }
+}
+
+dfn, em, i, var {
+    @if $dfn-font-style == $em-font-style and $em-font-style == $i-font-style and $i-font-style == $var-font-style {
+        font-style: $dfn-font-style;
+    }
+    @if mixin-exists(dfn-em-i-var-extra-style) {
+        @include dfn-em-i-var-extra-style();
+    }
+}
